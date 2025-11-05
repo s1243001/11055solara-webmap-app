@@ -21,9 +21,9 @@ def create_map():
     stations_geojson = repo_url + "stations.geojson"
     
     # 加入 GeoJSON 圖層
-    # leafmap/geopandas 現在可以透過 Raw URL 讀取到正確的 GeoJSON 格式內容
-    m.add_geojson(routes_geojson, layer_name="捷運路線")
-    m.add_geojson(stations_geojson, layer_name="捷運站點")
+    # 修正：移除 'layer_name' 參數，因為 leafmap 的 add_geojson 方法似乎不支援此參數，導致 Pydantic 驗證錯誤。
+    m.add_geojson(routes_geojson)
+    m.add_geojson(stations_geojson)
     
     return m
 
