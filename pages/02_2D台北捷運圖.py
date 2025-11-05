@@ -13,23 +13,11 @@ def create_map():
         sidebar_visible=True,
     )
 
-    MRT_geojson = ""
-    MRT_style = {
-        "layers": [
-            {
-                "id": "台北MRT",
-                "source": "transportation",
-                "source-layer": "segment",
-                "type": "line",
-                "paint": {
-                    "line-color": "#ffffff",
-                    "line-width": 2,
-                },
-            },
-        ]
-    }
+    routes_geojson = ""
+    stations_geojson = ""
     
-    m.add_pmtiles(road_pmtiles, style=road_style, tooltip=True, fit_bounds=False)
+    
+    m.add_pmtiles(MRT_pmtiles, style=MRT_style, tooltip=True, fit_bounds=False)
     return m
 
 
