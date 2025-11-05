@@ -14,10 +14,11 @@ def create_map():
     )
 
     routes_geojson = "https://github.com/s1243001/11055solara-webmap-app/blob/main/routes.geojson"
-    stations_geojson = ""
+    stations_geojson = "https://github.com/s1243001/11055solara-webmap-app/blob/main/stations.geojson"
     
     
-    m.add_pmtiles(MRT_pmtiles, style=MRT_style, tooltip=True, fit_bounds=False)
+    m.add_geojson(routes_geojson)
+    m.add_geojson(stations_geojson)
     return m
 
 
