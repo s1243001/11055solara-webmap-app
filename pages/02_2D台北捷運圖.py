@@ -13,7 +13,7 @@ def create_map():
         sidebar_visible=True,
     )
 
-    routes_geojson = ""
+    routes_geojson = "https://github.com/s1243001/11055solara-webmap-app/blob/main/routes.geojson"
     stations_geojson = ""
     
     
